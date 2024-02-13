@@ -125,13 +125,13 @@ if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 ?>
                 <!-- Card -->
-                <div class="col-md-4 mb-4"> <!-- Add mb-4 to create space between cards -->
+                <div class="col-md-4 mb-50"> <!-- Add mb-4 to create space between cards -->
                     <div class="card h-100">
                         <!-- Card Image -->
                         <img src="photos/<?php echo $row['image_path']; ?>" alt="Image with Description" class="card-img-top" style="object-fit: cover; height: 200px;"> <!-- Adjust height as needed -->
                         <!-- Card Body -->
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                            <h5 class="card-title" style="font-family: 'Arial', sans-serif; font-size: 25px; font-weight: bold;"><?php echo $row['title']; ?></h5> <!-- Adjust font style and size as needed -->
                             <p class="card-text"><?php echo $row['caption']; ?></p>
                         </div>
                     </div>
@@ -147,9 +147,10 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+
 <!-- Container for grid data -->
 <div class="container mt-4">
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php
         $conn = connectToDatabase();
 
@@ -161,11 +162,11 @@ if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 ?>
                 <!-- Grid Data Card -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: <?php echo $row['background_color']; ?>">
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-size: <?php echo $row['size']; ?>mm;"><?php echo $row['title']; ?></h5>
-                            <p class="card-text" style="font-size: <?php echo $row['size']; ?>mm;"><?php echo $row['caption']; ?></p>
+                <div class="col">
+                    <div class="card h-100" style="background-color: <?php echo $row['background_color']; ?>">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title mb-0" style="font-size: <?php echo $row['size']; ?>mm;"><?php echo $row['title']; ?></h5>
+                            <p class="card-text text-center mt-2" style="font-size: <?php echo $row['size']; ?>mm;"><?php echo $row['caption']; ?></p>
                         </div>
                     </div>
                 </div>

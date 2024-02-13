@@ -1,19 +1,5 @@
 /* Add this to your style.css file */
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    padding: 15px;
-    color: #fff;
-    text-align: center;
-}
-
 nav a {
     color: #fff;
     text-decoration: none;
@@ -23,6 +9,45 @@ nav a {
 .logo {
     max-width: 50px;
     max-height: 50px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.container mt-5 {
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.logo img {
+    max-width: 50px;
+    max-height: 500px;
 }
 
 #imageSlider {
@@ -66,24 +91,46 @@ nav a {
         max-width: 100%;
         height: auto;
     }
-}
-Russel
-Russel Guisihan
-/* Add this to your style.css file */
+}/* Add this to your style.css file */
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    padding: 15px;
+nav a {
     color: #fff;
-    text-align: center;
+    text-decoration: none;
+    margin: 0 15px;
 }
+
+.logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.container mt-5 {
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
 nav a {
     color: #ffffff;

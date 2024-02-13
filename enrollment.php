@@ -246,20 +246,20 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="d-flex align-items-center">
-                        <img src="assets/img/tt.png" alt="School Logo" width="30" height="30" class="mr-2" style="margin-right: 10px;">
+                        <img src="assets/img/logo-footer.png" alt="School Logo" width="60" height="60" class="mr-2" style="margin-right: 10px;">
                         <h5 class="mb-0">College University</h5>
                     </div>
                     <br>
                     <h6 class="mb-0">Prelim Exam</h6>
                 </div>
                 <div class="col-md-6">
-                    <div class="text-md-right">
-                        <p><i class="fas fa-map-marker-alt mr-2" style="margin-right: 10px;"></i>Sta. Ana, Pampanga</p>
-                        <p><i class="fas fa-envelope mr-2" style="margin-right: 10px;"></i>collegeuniversity@gmail.com</p>
-                        <p><i class="fas fa-phone mr-2" style="margin-right: 10px;"></i>09123456789</p>
+                        <div class="text-md-right">
+                            <p><i class="fas fa-map-marker-alt mr-2" style="margin-right: 10px;"></i>Sta. Ana, Pampanga</p>
+                            <p><i class="fas fa-envelope mr-2" style="margin-right: 10px;"></i>collegeuniversity@gmail.com</p>
+                            <p><i class="fas fa-phone mr-2" style="margin-right: 10px;"></i>09123456789</p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
         <hr class="bg-light">
         <div class="container">
@@ -269,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+</footer>
 
 
 </body>

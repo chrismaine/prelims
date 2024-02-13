@@ -53,6 +53,7 @@ require_once 'config/db.php';
     header {
             margin-bottom: 0 !important;
             padding-bottom: 0 !important;
+            padding: 20px;
         }
     /* Change header color on hover */
     header:hover {
