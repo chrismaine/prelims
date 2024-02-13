@@ -1,34 +1,25 @@
 <?php
 require_once 'db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["add"])) {
-        // Insert data into the database
-        $date = $_POST["date"];
-        $startTime = $_POST["start_time"];
-        $endTime = $_POST["end_time"];
-        $slots = $_POST["slots"];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Extract form data
+    $date = $_POST['date'];
+    $start_time = $_POST['start_time'];
+    $end_time = $_POST['end_time'];
+    $slots = $_POST['slots'];
 
-        $sql = "INSERT INTO appointment (date, start_time, end_time, slots) VALUES ('$date', '$startTime', '$endTime', '$slots')";
+    // Prepare SQL statement
+    $sql = "INSERT INTO appointment (date, start_time, end_time, slots) VALUES ('$date', '$start_time', '$end_time', $slots)";
 
-        if ($conn->query($sql) === TRUE) {
-            header("Location: ../apointment.php");
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    } elseif (isset($_POST["delete"])) {
-        // Delete data from the database
-        $id = $_POST["id"];
-        $sql = "DELETE FROM appointment WHERE id = '$id'";
-
-        if ($conn->query($sql) === TRUE) {
-            header("Location: ../apointment.php");
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+    // Execute SQL statement
+    if ($conn->query($sql) === TRUE) {
+        header("Location: ../appointment.php");
+        exit;
+    } else {
+        echo "Error adding appointment: " . mysqli_error($conn);
     }
+} else {
+    echo "Invalid request.";
 }
 
-// Close the database connection
-$conn->close();
 ?>

@@ -1,4 +1,3 @@
-dashboard.php
 <?php
 // Include the template content
 ob_start();

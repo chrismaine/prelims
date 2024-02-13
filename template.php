@@ -169,7 +169,7 @@ $role = $_SESSION["role"];
 
 <li class="nav-item dropdown has-arrow main-drop">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
+<span class="user-img"><img src="assets/img/profile.png" alt="">
 <span class="status online"></span></span>
 </a>
 <div class="dropdown-menu menu-drop-user">
@@ -221,7 +221,7 @@ $role = $_SESSION["role"];
 <li class="submenu">
 <a href="javascript:void(0);"><img src="assets/img/icons/sales1.svg" alt="img"><span> Enrollment</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="apointment.php">Enrollment Apointment</a></li>
+<li><a href="appointment.php">Enrollment Apointment</a></li>
 <li><a href="pos.html">Approve Student</a></li>
 <li><a href="pos.html">Subject</a></li>
 <li><a href="salesreturnlists.html">Add class</a></li>

@@ -1,5 +1,8 @@
-<?php include 'header.php'; ?>
+<?php 
+require_once 'config/db.php'; // Include the database connection file
 
+include 'header.php'; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +86,7 @@
 
 <body>
     <table>
+        <!-- Table header -->
         <thead>
             <tr>
                 <th>Date</th>
@@ -93,20 +97,31 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <?php
+            // Fetch appointments from the database
+            $sql = "SELECT * FROM appointment";
+            $result = $conn->query($sql);
+
+            if ($result && $result->num_rows > 0) {
+                // Output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["date"] . "</td>";
+                    echo "<td>" . $row["start_time"] . "</td>";
+                    echo "<td>" . $row["end_time"] . "</td>";
+                    echo "<td>" . $row["slots"] . "</td>";
+                    echo "<td><a href='config/delete_appointment.php?id=" . $row["id"] . "'>Delete</a></td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='5'>No appointment found</td></tr>";
+            }
+            ?>
         </tbody>
     </table>
     <br>
     <br>
     <div class="enrollment-container">
-
-
         <div class="enrollment-section">
             <form method="post" action="config/enroll.php">
                 <div class="enrollment-section">
